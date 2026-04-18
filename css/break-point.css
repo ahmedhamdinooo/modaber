@@ -1,0 +1,345 @@
+/* ===================================================
+   break-point.css — Responsive
+   =================================================== */
+
+
+/* ===================================================
+   DESKTOP MEDIUM  (1025px — 1440px)
+   =================================================== */
+@media (max-width: 1440px) and (min-width: 1025px) {
+
+  .dashboard-grid2 {
+    grid-template-columns: 260px 1fr 260px;
+    gap: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr 280px;
+    gap: 16px;
+  }
+}
+
+
+/* ===================================================
+   DESKTOP SMALL / TABLET  (768px — 1024px)
+   =================================================== */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  /* --- Sidebar --- */
+  #sidebar {
+    width: 70px;
+    padding: 16px 8px;
+  }
+
+  .logo-sidebar-content { justify-content: center; }
+  .text-logo-sidebar    { display: none; }
+
+  .img-logo-sidebar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .img-logo-sidebar img {
+    width: 22px;
+    height: 22px;
+  }
+
+  #main-nav ul li {
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  #main-nav ul li span:last-child { display: none; }
+
+  #sidebar-quick-action h3 { display: none; }
+
+  #sidebar-quick-action button {
+    justify-content: center;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    width: 100%;
+    background-color: transparent;
+    border: none !important;
+  }
+
+  #sidebar-quick-action button span { display: none; }
+
+  #sidebar-quick-action button div {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .container-sidebar {
+    gap: 16px;
+    align-items: center;
+  }
+
+  #main-nav,
+  #main-nav ul { width: 100%; }
+
+  #sidebar-quick-action {
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* --- Main content --- */
+  #main-content {
+    margin-inline-start: 70px;
+    padding: 16px;
+  }
+
+  /* --- Header --- */
+  .text-header-content1 h2           { font-size: 1.1rem; }
+  .text-header-content1 p            { display: none; }
+  .text-header-content2 p:last-child { display: none; }
+
+
+  .cards-return-money { flex-wrap: wrap; }
+
+  .cards-return-money .type-return-money {
+    flex: 1 1 calc(33% - 14px);
+    min-width: 160px;
+  }
+
+  /* --- Grid 1 --- */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .right-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .right-col .card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 260px;
+  }
+
+  /* --- Grid 2 --- */
+  .dashboard-grid2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .dashboard-grid2 .card:nth-child(3) { grid-column: 1 / -1; }
+}
+
+
+/* ===================================================
+   MOBILE  (أقل من 768px)
+   =================================================== */
+@media (max-width: 767px) {
+
+
+  body,
+  #finance-dashboard-layout {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+
+  #sidebar {
+    width: 100%;
+    height: 64px;
+    top: auto;
+    bottom: 0;
+    inset-inline-start: 0;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding: 0 8px;
+    flex-direction: row;
+    overflow: visible;
+    z-index: 100;
+  }
+
+  .container-sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0;
+  }
+
+
+  .logo-sidebar         { display: none; }
+  #sidebar-quick-action { display: none; }
+
+
+  #main-nav {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #main-nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  #main-nav ul li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    flex: 1;
+  }
+
+  #main-nav ul li span:last-child {
+    display: block;
+    font-size: 0.6rem;
+    text-align: center;
+    color: var(--sm-text-color);
+  }
+
+  #main-nav ul li:nth-child(1) span:last-child {
+    color: #2756E8;
+  }
+
+  #main-nav ul li span img {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  #main-content {
+    margin-inline-start: 0;
+    padding: 12px 12px 80px 12px;
+  }
+
+  /* --- Header --- */
+  #header-main-content {
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+
+  .header-container {
+    width: 100%;
+    padding: 6px;
+  }
+
+  .img-header-content1 {
+    width: 38px;
+    height: 38px;
+  }
+
+  .img-header-content1 img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .text-header-content1 h2 { font-size: 1rem; }
+  .text-header-content1 p  { display: none; }
+
+  .contact {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .circle-bc-green { display: none; }
+
+  .icon-header button {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .icon-header button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .profile-header {
+    padding: 4px 8px;
+    gap: 6px;
+  }
+
+  .text-header-content2 { display: none; }
+
+  .profile-header img {
+    width: 32px;
+    height: 32px;
+  }
+
+ 
+  .cards-return-money {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cards-return-money .type-return-money {
+    width: 100%;
+    padding: 16px 14px;
+  }
+
+  .cards-return-money .type-return-money:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .type-return-money .big-num {
+    font-size: 1.4rem;
+  }
+
+  /* --- Grid 1 --- */
+  .dashboard-grid { grid-template-columns: 1fr; }
+
+  .right-col {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .right-col .card {
+    width: 100%;
+    max-width: 100%;
+    flex: unset;
+    min-width: unset;
+  }
+
+  
+  .transactions-table th:nth-child(3),
+  .transactions-table td:nth-child(3),
+  .transactions-table th:nth-child(4),
+  .transactions-table td:nth-child(4) { display: none; }
+
+  .transactions-table td { padding: 8px 6px; font-size: 0.82rem; }
+  .tx-name { font-size: 0.82rem; }
+  .tx-sub  { font-size: 0.7rem; }
+
+  /* --- Grid 2 --- */
+  .dashboard-grid2 { grid-template-columns: 1fr; }
+
+  .dashboard-grid2 .card:nth-child(3) { grid-column: 1; }
+
+  /* --- Bills grid --- */
+  .bills-grid { grid-template-columns: 1fr 1fr; }
+
+  .bills-total { font-size: 1.7rem; }
+
+  /* --- Chart --- */
+  .chart-bars { gap: 8px; }
+
+  .bar { width: 14px; }
+
+  .bar-label { font-size: 0.68rem; }
+
+  /* --- Payment cards --- */
+  .flip-inner { height: 130px; }
+
+  .pc-number { font-size: 0.8rem; letter-spacing: 1px; }
+
+  /* --- Budget --- */
+  .budget-total-val  { font-size: 1.2rem; }
+  .budget-remain-val { font-size: 1rem; }
+}
